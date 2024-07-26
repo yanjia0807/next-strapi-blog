@@ -1,9 +1,11 @@
 import Image from '@/components/Image'
 import DisplaySection from '@/components/DisplaySection'
 import MotionSection from '@/components/MotionSection'
+import { createTranslation } from '@/lib/i18n'
 
-export default function AuthorLayout({ children, content }: any) {
+export default async function AuthorLayout({ children, content, locale }: any) {
   const { name, avatar, mobile, weixin, email, description, displaySection } = content
+  const { t } = await createTranslation(locale, ['common'])
 
   return (
     <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -20,7 +22,25 @@ export default function AuthorLayout({ children, content }: any) {
             />
           )}
           <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">{name}</h3>
-          <div className="text-gray-500 dark:text-gray-400">{description}</div>
+          <p className="text-gray-500 dark:text-gray-400">{description}</p>
+          {email && (
+            <p className="text-gray-500 dark:text-gray-400">
+              <span className="font-bold">{t('email')}: </span>
+              {email}
+            </p>
+          )}
+          {mobile && (
+            <p className="text-gray-500 dark:text-gray-400">
+              <span className="font-bold">{t('mobile')}: </span>
+              {mobile}
+            </p>
+          )}
+          {weixin && (
+            <p className="text-gray-500 dark:text-gray-400">
+              <span className="font-bold">{t('wechat')}: </span>
+              {weixin}
+            </p>
+          )}
         </div>
         <div className="prose max-w-none py-8 dark:prose-invert xl:col-span-2">{children}</div>
       </MotionSection>

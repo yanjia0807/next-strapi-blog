@@ -30,7 +30,10 @@ export default async function Page({ params: { locale } }) {
   const content = blocks?.find((block) => block['__component'] === 'shared.rich-text')?.body
 
   return (
-    <AuthorLayout content={{ name, email, mobile, weixin, description, avatar, displaySection }}>
+    <AuthorLayout
+      content={{ name, email, mobile, weixin, description, avatar, displaySection }}
+      locale={locale}
+    >
       <MDXRemote source={content} />
     </AuthorLayout>
   )

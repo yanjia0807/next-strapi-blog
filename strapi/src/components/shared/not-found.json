@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_not_founds",
+  "info": {
+    "displayName": "NotFound",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "back": {
+      "type": "string"
+    }
+  }
+}

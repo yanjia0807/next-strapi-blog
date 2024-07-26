@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_display_sections",
+  "info": {
+    "displayName": "DisplaySection",
+    "icon": "cube"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "displayText": {
+      "type": "text"
+    }
+  }
+}

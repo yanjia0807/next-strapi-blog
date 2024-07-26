@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_social_links",
+  "info": {
+    "displayName": "SocialLink",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "enumeration",
+      "enum": [
+        "wechart",
+        "weibo",
+        "mail",
+        "youtube",
+        "instagram",
+        "facebook",
+        "x",
+        "rss"
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_socialbars",
+  "info": {
+    "displayName": "Socialbar"
+  },
+  "options": {},
+  "attributes": {
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.social-link"
+    }
+  }
+}

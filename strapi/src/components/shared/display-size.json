@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_display_sizes",
+  "info": {
+    "displayName": "DisplaySize",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "size": {
+      "type": "integer"
+    }
+  }
+}

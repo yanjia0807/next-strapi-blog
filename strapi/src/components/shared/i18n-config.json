@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_i18n_configs",
+  "info": {
+    "displayName": "I18nConfig",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "namespace": {
+      "type": "string"
+    },
+    "config": {
+      "type": "json"
+    }
+  }
+}

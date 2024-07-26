@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
       revalidateTag('posts')
       if (event === 'entry.update') {
         revalidateTag('posts')
-        revalidateTag(`post-${entry.slug}}`)
+        revalidateTag(`post-${entry.slug}`)
       }
     }
     if (model === 'tag') {

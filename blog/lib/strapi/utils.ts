@@ -1,9 +1,9 @@
 export function getStrapiURL() {
-  return process.env.STRAPI_URL
+  return process.env.NEXT_PUBLIC_STRAPI_URL
 }
 
 export function getStrapiPublicToken() {
-  return process.env.STRAPI_PUBLIC_TOKEN
+  return process.env.NEXT_PUBLIC_STRAPI_PUBLIC_TOKEN
 }
 
 export function setHeaders() {

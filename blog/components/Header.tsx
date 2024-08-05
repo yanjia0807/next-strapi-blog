@@ -23,7 +23,7 @@ const Header = ({ data }) => {
           </div>
         </Link>
       </div>
-      <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
+      <div className="flex items-center space-x-4 leading-none sm:space-x-6">
         <Navbar navLinks={navLinks} locale={locale} />
         <SearchButton />
         <ThemeSwitch />

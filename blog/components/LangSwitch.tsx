@@ -74,7 +74,7 @@ const LangSwitch = ({ locales, defaultLocale }) => {
             >
               {locale.charAt(0).toUpperCase() + locale.slice(1)}
               <ChevronDownIcon
-                className={`ml-1 mt-1 transform transition-transform duration-300 ${open ? 'rotate-180' : 'rotate-0'}`}
+                className={`ml-1 transform transition-transform duration-300 ${open ? 'rotate-180' : 'rotate-0'}`}
               />
             </Menu.Button>
             <Transition

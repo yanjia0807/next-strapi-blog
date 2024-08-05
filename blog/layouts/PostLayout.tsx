@@ -78,7 +78,7 @@ export default async function PostLayout({ post, prev, next, children, locale, c
                 </dd>
               </dl>
               <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
-                <div className="prose overflow-x-auto whitespace-pre-wrap break-words break-all pb-8 pt-10 dark:prose-invert">
+                <div className="prose overflow-x-auto whitespace-pre-wrap break-words break-all pb-8 pt-10 dark:prose-invert lg:prose-xl">
                   {children}
                 </div>
               </div>

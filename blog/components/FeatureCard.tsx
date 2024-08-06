@@ -19,7 +19,7 @@ const FeatureCard = async ({ locale, posts, pagination }) => {
           const imgSrc = queryStrapiMedia(cover.url)
 
           return (
-            <MotionItem key={post.slug} className="md w-full p-4 md:w-1/2">
+            <MotionItem key={post.slug} className="md relative w-full p-4 md:w-1/2">
               <div
                 className={`${
                   imgSrc && 'h-full'
@@ -30,10 +30,10 @@ const FeatureCard = async ({ locale, posts, pagination }) => {
                     <Image
                       alt={title}
                       src={imgSrc}
-                      className="h-auto w-full object-cover object-center md:h-36 lg:h-48"
+                      className="h-auto w-full object-cover md:h-36 lg:h-48"
                       width={0}
                       height={0}
-                      sizes="100vw"
+                      unoptimized={true}
                     />
                   </Link>
                 )}

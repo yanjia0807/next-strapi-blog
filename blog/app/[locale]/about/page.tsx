@@ -1,10 +1,10 @@
 import { Metadata } from 'next'
-import { MDXRemote } from 'next-mdx-remote/rsc'
 import { createPageMetadata } from '@/lib/utils'
 import AuthorLayout from '@/layouts/AuthorLayout'
 import { queryPage } from '@/lib/strapi/page'
 import { queryMainAuthor } from '@/lib/strapi/author'
 import { queryStrapiMedia } from '@/lib/strapi/utils'
+import MdxRender from '@/components/MdxRender'
 
 export async function generateMetadata({ params: { locale } }): Promise<Metadata> {
   return createPageMetadata(`about-${locale}`)
@@ -27,14 +27,14 @@ export default async function Page({ params: { locale } }) {
     blocks,
   } = author
   const avatar = queryStrapiMedia(avatarUrl)
-  const content = blocks?.find((block) => block['__component'] === 'shared.rich-text')?.body
+  const source = blocks?.find((block) => block['__component'] === 'shared.rich-text')?.body
 
   return (
     <AuthorLayout
       content={{ name, email, mobile, weixin, description, avatar, displaySection }}
       locale={locale}
     >
-      <MDXRemote source={content} />
+      <MdxRender source={source} />
     </AuthorLayout>
   )
 }

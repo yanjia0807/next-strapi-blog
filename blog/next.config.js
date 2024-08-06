@@ -17,22 +17,15 @@ module.exports = () => {
     images: {
       remotePatterns: [
         {
-          protocol: 'http',
           hostname: '127.0.0.1',
           port: '1337',
-          pathname: '/uploads/**/*',
         },
         {
-          protocol: 'http',
           hostname: '138.3.218.25',
           port: '1337',
-          pathname: '/uploads/**/*',
         },
         {
           hostname: 'api.wuqinyao.site',
-        },
-        {
-          hostname: 'www.wuqinyao.site',
         },
         {
           protocol: 'https',

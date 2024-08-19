@@ -16,7 +16,7 @@ const Header = ({ data }) => {
   return (
     <header className="flex items-center justify-between py-10">
       <div>
-        <Link href="/">
+        <Link href={`/${locale}/`}>
           <div className="flex items-center justify-between">
             <Logo src={logoUrl} />
             <div className="hidden text-2xl font-semibold xl:block">{title}</div>

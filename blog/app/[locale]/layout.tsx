@@ -86,7 +86,6 @@ export default async function RootLayout({ children, params: { locale } }) {
     navbar: { links: navLinks },
     socialbar: { links: socialLinks },
     logo,
-    theme,
     author,
     repository,
   } = await queryGlobalConfigData(locale)
@@ -115,9 +114,9 @@ export default async function RootLayout({ children, params: { locale } }) {
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
-        <TwSizeIndicator />
-        <ThemeProviders defaultTheme={theme}>
+      <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950  dark:text-white">
+        <ThemeProviders>
+          <TwSizeIndicator />
           <TranslationsProvider
             locale={locale}
             ns={ns}

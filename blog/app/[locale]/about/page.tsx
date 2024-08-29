@@ -1,10 +1,10 @@
 import { Metadata } from 'next'
 import { createPageMetadata } from '@/lib/utils'
-import AuthorLayout from '@/layouts/AuthorLayout'
+import AuthorLayout from '@/layouts/author-layout'
 import { queryPage } from '@/lib/strapi/page'
 import { queryMainAuthor } from '@/lib/strapi/author'
 import { queryStrapiMedia } from '@/lib/strapi/utils'
-import MdxRender from '@/components/MdxRender'
+import MdxRender from '@/components/mdx-render'
 
 export async function generateMetadata({ params: { locale } }): Promise<Metadata> {
   return createPageMetadata(`about-${locale}`)

@@ -1,6 +1,6 @@
-import Image from '@/components/Image'
-import DisplaySection from '@/components/DisplaySection'
-import MotionSection from '@/components/MotionSection'
+import Image from '@/components/image'
+import DisplaySection from '@/components/display-section'
+import MotionSection from '@/components/motion-section'
 import { createTranslation } from '@/lib/i18n'
 
 export default async function AuthorLayout({ children, content, locale }: any) {

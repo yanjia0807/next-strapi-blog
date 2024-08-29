@@ -1,12 +1,12 @@
 'use client'
 
 import Link from 'next/link'
-import Navbar from './Navbar'
-import MobileNav from './MobileNav'
-import ThemeSwitch from './ThemeSwitch'
-import LangSwitch from './LangSwitch'
-import SearchButton from './SearchButton'
-import Logo from '@/components/Logo'
+import Navbar from './navbar'
+import MobileNav from './mobile-nav'
+import ThemeSwitch from './theme-switch'
+import LangSwitch from './lang-switch'
+import SearchButton from './search-button'
+import Logo from '@/components/logo'
 import { useParams } from 'next/navigation'
 
 const Header = ({ data }) => {

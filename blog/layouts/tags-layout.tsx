@@ -1,7 +1,6 @@
-import Link from 'next/link'
 import { createTranslation } from '@/lib/i18n'
-import Tag from '@/components/Tag'
-import MotionSection from '@/components/MotionSection'
+import Tag from '@/components/tag'
+import MotionSection from '@/components/motion-section'
 
 const variants = {
   hidden: { opacity: 0, x: 0, y: -25 },

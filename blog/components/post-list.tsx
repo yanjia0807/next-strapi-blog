@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import Tag from './Tag'
-import MotionList from './MotionList'
-import MotionItem from './MotionItem'
-import Pagination from './Pagination'
-import { formatDate } from '@/lib/utils'
+import Tag from './tag'
+import MotionList from './motion-list'
+import MotionItem from './motion-item'
+import Pagination from './pagination'
 import { createTranslation } from '@/lib/i18n'
+import { momentFormat } from '@/lib/utils'
 
 async function PostList({ posts, locale, pagination }: any) {
   const { t } = await createTranslation(locale, ['common'])
@@ -21,7 +21,7 @@ async function PostList({ posts, locale, pagination }: any) {
               <article className="flex flex-col space-y-2 xl:space-y-0">
                 <dl>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                    <time dateTime={publishedAt}>{formatDate(publishedAt, locale)}</time>
+                    <time dateTime={publishedAt}>{momentFormat(publishedAt, locale, 'LLLL')}</time>
                   </dd>
                 </dl>
                 <div className="space-y-3">

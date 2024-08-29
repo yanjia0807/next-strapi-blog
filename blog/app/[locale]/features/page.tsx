@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { createPageMetadata } from '@/lib/utils'
-import FeaturesLayout from '@/layouts/FeaturesLayout'
+import FeaturesLayout from '@/layouts/features-layout'
 import { queryPage } from '@/lib/strapi/page'
 import { queryPostFeatures } from '@/lib/strapi/post'
 

@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import Image from '@/components/Image'
-import Pagination from '@/components/Pagination'
-import MotionList from '@/components/MotionList'
-import MotionItem from '@/components/MotionItem'
+import Image from '@/components/image'
+import Pagination from '@/components/pagination'
+import MotionList from '@/components/motion-list'
+import MotionItem from '@/components/motion-item'
 import { queryStrapiMedia } from '@/lib/strapi/utils'
 import { createTranslation } from '@/lib/i18n'
 

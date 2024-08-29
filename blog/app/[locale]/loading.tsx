@@ -1,4 +1,4 @@
-import Spin from '@/components/Spin'
+import Spin from '@/components/spin'
 
 function Loading() {
   return <Spin />

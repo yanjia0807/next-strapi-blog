@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import TagsLayout from '@/layouts/TagsLayout'
+import TagsLayout from '@/layouts/tags-layout'
 import { createPageMetadata } from '@/lib/utils'
 import { queryTags } from '@/lib/strapi/tag'
 

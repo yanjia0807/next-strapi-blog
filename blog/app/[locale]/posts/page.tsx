@@ -1,9 +1,9 @@
 import { Metadata } from 'next'
 import { createPageMetadata } from '@/lib/utils'
-import ListLayoutWithTags from '@/layouts/ListLayoutWithTags'
 import { queryPage } from '@/lib/strapi/page'
 import { queryTagBySlug, queryTags } from '@/lib/strapi/tag'
 import { queryPosts, queryPostsInTag } from '@/lib/strapi/post'
+import ListLayoutWithTags from '@/layouts/list-layout-with-tags'
 
 export async function generateMetadata({ params: { locale } }): Promise<Metadata> {
   return createPageMetadata(`post-${locale}`)

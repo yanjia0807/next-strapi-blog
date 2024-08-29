@@ -1,6 +1,6 @@
 import React from 'react'
 import { MDXRemote } from 'next-mdx-remote/rsc'
-import Image from './Image'
+import Image from './image'
 
 const components = {
   img: (props) => {

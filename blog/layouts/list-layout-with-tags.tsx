@@ -1,7 +1,7 @@
 import { createTranslation } from '@/lib/i18n'
-import { PaginationProps } from '@/components/Pagination'
-import TagSidebar from '@/components/TagSidebar'
-import PostList from '@/components/PostList'
+import { PaginationProps } from '@/components/pagination'
+import TagSidebar from '@/components/tag-sidebar'
+import PostList from '@/components/post-list'
 
 interface ListLayoutWithTagsProps {
   tags: any[]

@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation.js'
 import { KBarProvider } from 'kbar'
-import { KBarModal } from './KBarModal'
+import { KBarModal } from './kbar-modal'
 import { queryAllPosts } from '@/lib/strapi/post'
 
 export function KBarSearchProvider({ children, locale }) {

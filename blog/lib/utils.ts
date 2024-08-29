@@ -1,18 +1,20 @@
 import { queryPage } from './strapi/page'
+import { type ClassValue, clsx } from 'clsx'
+import { twMerge } from 'tailwind-merge'
+import moment from 'moment'
 
-export function formatDate(
-  date: string | Date,
-  locale: string,
-  format?: Intl.DateTimeFormatOptions
-): string {
-  const defaultFormat: Intl.DateTimeFormatOptions = {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
+export function getMomentLocal(local) {
+  const locals = {
+    zh: 'zh-cn',
+    ja: 'ja',
+    en: 'en',
   }
-  const fmt = format || defaultFormat
-  const now = new Date(date).toLocaleDateString(locale, fmt)
-  return now
+
+  return locals[local]
+}
+
+export function momentFormat(value, locale, format) {
+  return moment(value).locale(locale).format(format)
 }
 
 export async function createPageMetadata(slug) {
@@ -23,4 +25,8 @@ export async function createPageMetadata(slug) {
   if (title) metadata.title = title
   if (description) metadata.description = description
   return metadata
+}
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
 }

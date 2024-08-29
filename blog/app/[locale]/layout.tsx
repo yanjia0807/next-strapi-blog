@@ -2,16 +2,18 @@ import 'css/tailwind.css'
 
 import { Metadata } from 'next'
 import { Space_Grotesk } from 'next/font/google'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import TranslationsProvider from '@/components/TranslationsProvider'
-import { ThemeProviders } from '@/components/ThemeProviders'
-import { KBarSearchProvider } from '@/components/KBarSearchProvider'
+import Header from '@/components/header'
+import Footer from '@/components/footer'
+import TranslationsProvider from '@/components/translations-provider'
+import { ThemeProviders } from '@/components/theme-providers'
+import { KBarSearchProvider } from '@/components/kbar-search-provider'
 import { dir } from 'i18next'
-import TwSizeIndicator from '@/components/TwSizeIndicator'
-import SectionContainer from '@/components/SectionContainer'
+import TwSizeIndicator from '@/components/tw-size-indicator'
+import SectionContainer from '@/components/section-container'
 import { queryGlobalConfigData, queryI18nConfig, queryI18nResources } from '@/lib/strapi/global'
 import { queryStrapiMedia } from '@/lib/strapi/utils'
+import 'moment/locale/zh-cn'
+import 'moment/locale/ja'
 
 export async function generateStaticParams() {
   const { locales } = await queryI18nConfig()
@@ -76,7 +78,15 @@ const space_grotesk = Space_Grotesk({
   variable: '--font-space-grotesk',
 })
 
-export default async function RootLayout({ children, params: { locale } }) {
+export default async function RootLayout({
+  children,
+  modal,
+  params: { locale },
+}: {
+  children: React.ReactNode
+  modal: React.ReactNode
+  params: any
+}) {
   const ns = ['common']
   const { locales, defaultLocale } = await queryI18nConfig()
   const resources = await queryI18nResources(locale, ns)
@@ -131,6 +141,7 @@ export default async function RootLayout({ children, params: { locale } }) {
                   <main className="mb-auto">{children}</main>
                   <Footer data={footerData} />
                 </div>
+                {modal}
               </SectionContainer>
             </KBarSearchProvider>
           </TranslationsProvider>

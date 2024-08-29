@@ -1,5 +1,5 @@
-import FeatureCard from '@/components/FeatureCard'
-import DisplaySection from '@/components/DisplaySection'
+import FeatureCard from '@/components/feature-card'
+import DisplaySection from '@/components/display-section'
 
 function FeaturesLayout({ locale, displaySection, posts, pagination }) {
   return (

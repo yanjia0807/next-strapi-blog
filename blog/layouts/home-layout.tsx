@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { createTranslation } from '@/lib/i18n'
-import DisplaySection from '@/components/DisplaySection'
-import PostList from '@/components/PostList'
+import DisplaySection from '@/components/display-section'
+import PostList from '@/components/post-list'
 
 export default async function HomeLayout({ posts, contentSections, locale }) {
   const { t } = await createTranslation(locale, ['common'])

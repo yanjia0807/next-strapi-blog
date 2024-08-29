@@ -1,4 +1,4 @@
-import HomeLayout from '@/layouts/HomeLayout'
+import HomeLayout from '@/layouts/home-layout'
 import { queryPage } from '@/lib/strapi/page'
 import { queryPosts } from '@/lib/strapi/post'
 

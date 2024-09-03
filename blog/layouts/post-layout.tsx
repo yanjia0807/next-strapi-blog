@@ -97,7 +97,7 @@ export default async function PostLayout({ post, prev, next, children, locale }:
                           {t('previous_article')}
                         </h2>
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                          <Link href={`/posts/${prev.slug}`}>{prev.title}</Link>
+                          <Link href={`/${locale}/posts/${prev.slug}`}>{prev.title}</Link>
                         </div>
                       </div>
                     )}
@@ -107,7 +107,7 @@ export default async function PostLayout({ post, prev, next, children, locale }:
                           {t('next_article')}
                         </h2>
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                          <Link href={`/posts/${next.slug}`}>{next.title}</Link>
+                          <Link href={`/${locale}/posts/${next.slug}`}>{next.title}</Link>
                         </div>
                       </div>
                     )}
@@ -116,7 +116,7 @@ export default async function PostLayout({ post, prev, next, children, locale }:
               </div>
               <div className="pt-4 xl:pt-8">
                 <Link
-                  href={`/posts`}
+                  href={`/${locale}/posts`}
                   className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                   aria-label="Back to the blog"
                 >

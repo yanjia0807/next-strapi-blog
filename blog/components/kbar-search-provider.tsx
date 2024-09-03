@@ -19,7 +19,7 @@ export function KBarSearchProvider({ children, locale }) {
         keywords: post.description || '',
         section: 'Content',
         subtitle: post.publishedAt,
-        perform: () => router.push(`/posts/${post.slug}`),
+        perform: () => router.push(`/${locale}/posts/${post.slug}`),
       }))
     }
 

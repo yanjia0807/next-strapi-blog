@@ -1,4 +1,3 @@
-import 'css/prism.css'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import PostLayout from '@/layouts/post-layout'

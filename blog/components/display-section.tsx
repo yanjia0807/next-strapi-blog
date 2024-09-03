@@ -14,7 +14,7 @@ function DisplaySection({ content }: DisplaySectionProps) {
   return (
     <div className="space-y-2 py-6 md:space-y-5">
       {title && title.length > 0 && (
-        <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+        <h1 className="md:leading-14 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl">
           {title}
         </h1>
       )}

@@ -20,18 +20,22 @@ const FeatureCard = async ({ locale, posts, pagination }) => {
 
   return (
     <>
-      <MotionList className="-m-4 flex flex-wrap">
+      <MotionList className="-mx-8 flex flex-wrap justify-between">
         {!posts.length && t('no_results')}
         {posts.map((post) => {
           const { title, description, cover } = post
           const img = queryStrapiMedia(cover.url)
 
           return (
-            <MotionItem key={post.slug} className="md relative w-full p-4 md:w-1/2">
+            <MotionItem key={post.slug} className="relative p-4 md:w-1/2">
               <Card>
                 <CardHeader>
                   <CardTitle>{title}</CardTitle>
-                  <CardDescription>{description}</CardDescription>
+                  <CardDescription>
+                    <pre className="overflow-x-auto whitespace-pre-wrap break-words break-all text-gray-500 dark:text-gray-400">
+                      {description}
+                    </pre>
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Image
